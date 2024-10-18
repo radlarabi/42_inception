@@ -13,8 +13,8 @@ services:
       - mariadb_data:/var/lib/mysql
     env_file:
       - .env
-    # restart:
-    #   always
+    restart:
+      always
   
   nginx:
     build: ./requirements/nginx/
@@ -30,8 +30,8 @@ services:
       - .env
     depends_on:
       - wordpress
-    # restart:
-    #   always
+    restart:
+      always
   
   wordpress:
     build: ./requirements/wordpress/
@@ -40,15 +40,15 @@ services:
     volumes:
       - wordpress_data:/var/www/wordpress
     ports:
-      - "9002:9000"
+      - "9000:9000"
     networks:
       - my_network
     env_file:
       - .env
     depends_on:
       - mariadb
-    # restart:
-    #   always
+    restart:
+      always
 
 
 volumes:
