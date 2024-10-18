@@ -1,0 +1,1 @@
+listen = /run/php/php8.2-fpm.sock
