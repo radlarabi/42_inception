@@ -23,7 +23,7 @@ services:
     volumes:
       - wordpress_data:/var/www/wordpress
     ports:
-      - "80:80"
+      - "443:443"
     networks:
       - my_network
     env_file:
