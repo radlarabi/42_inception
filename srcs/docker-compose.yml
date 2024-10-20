@@ -16,23 +16,6 @@ services:
     restart:
       always
   
-  nginx:
-    build: ./requirements/nginx/
-    container_name: nginx
-    image: nginx
-    volumes:
-      - wordpress_data:/var/www/wordpress
-    ports:
-      - "443:443"
-    networks:
-      - my_network
-    env_file:
-      - .env
-    depends_on:
-      - wordpress
-    restart:
-      always
-  
   wordpress:
     build: ./requirements/wordpress/
     container_name: wordpress
@@ -49,7 +32,23 @@ services:
       - mariadb
     restart:
       always
-
+  
+  nginx:
+    build: ./requirements/nginx/
+    container_name: nginx
+    image: nginx
+    volumes:
+      - wordpress_data:/var/www/wordpress
+    ports:
+      - "443:443"
+    networks:
+      - my_network
+    env_file:
+      - .env
+    depends_on:
+      - wordpress
+    restart:
+      always
 
 volumes:
   wordpress_data:
