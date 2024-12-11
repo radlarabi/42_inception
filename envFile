@@ -1,0 +1,27 @@
+# domain name
+DOMAIN_NAME=localhost
+
+# certificates
+CERTS_PRIV=/etc/nginx/ssl/privkey.pem
+CERTS_=/etc/nginx/ssl/fullchain.pem
+
+# MYSQL SETUP
+MYSQL_ROOT_PASSWORD=rlarabi
+MYSQL_DATABASE=wordpress
+MYSQL_USER=rlarabi
+MYSQL_ROOT_USER=root
+MYSQL_PASSWORD=XcIRKPsfdTKqo5B
+SQL_HOST=mariadb
+
+# root account of wordpress
+WP_URL=localhost
+WP_TITLE=myBlog
+WP_ADMIN=rlarabi
+WP_ADMIN_PASSWORD=YODN6pDADmfKcXG
+WP_ADMIN_EMAIL=lar.radouan@gmail.com
+
+
+# user account of wordpress
+WP_USER_USERNAME=radouan
+WP_USER_PASSWORD=ODcXG6pDfKNADm
+WP_USER_EMAIL=larabi.radouan@gmail.com
