@@ -10,10 +10,9 @@ curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.pha
 chmod +x wp-cli.phar;
 mv wp-cli.phar /usr/local/bin/wp
 
-
 wp core is-installed --path="/var/www/wordpress" --allow-root
 
 wp core install --url=$WP_URL --title=$WP_TITLE --admin_user=$WP_ADMIN --admin_password=$WP_ADMIN_PASSWORD --admin_email=$WP_ADMIN_EMAIL --path="/var/www/wordpress" --allow-root;
 wp user create $WP_USER_USERNAME $WP_USER_EMAIL --role=subscriber --user_pass=$WP_USER_PASSWORD --path="/var/www/wordpress" --allow-root;
-echo "user create $WP_USER_USERNAME $WP_USER_EMAIL --role=subscriber --user_pass=$WP_USER_PASSWORD --path="/var/www/wordpress" --allow-root"
+
 php-fpm8.2 -F;
