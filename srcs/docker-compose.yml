@@ -51,6 +51,8 @@ services:
       - my_network
     env_file:
       - .env
+    depends_on:
+      - wordpress
     restart:
       always
 

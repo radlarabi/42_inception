@@ -12,4 +12,4 @@ RUN chmod +x init_db.sh
 
 EXPOSE 3306
 
-CMD [ "sh", "init_db.sh"]
+CMD [ "/bin/sh", "init_db.sh"]

@@ -6,4 +6,4 @@ sed -i "s|server_name PATH_OF_DOMAIN_NAME;|server_name $DOMAIN_NAME;|" /etc/ngin
 sed -i "s|ssl_certificate PATH_OF_CERTS_;|ssl_certificate $CERTS_;|" /etc/nginx/sites-enabled/nginx.conf
 sed -i "s|ssl_certificate_key PATH_OF_CERTS_PRIV;|ssl_certificate_key $CERTS_PRIV;|" /etc/nginx/sites-enabled/nginx.conf
 
-nginx -g "daemon off;"
+exec nginx -g "daemon off;"
